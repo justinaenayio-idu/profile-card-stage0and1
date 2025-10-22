@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            padding: 20px 20px 100px 20px; /* Extra bottom padding for nav */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Navigation - Bottom Centered (Not Full Width) */
+        .main-nav {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            border-radius: var(--border-radius);
+            width: auto;
+            max-width: 90%;
+        }
+
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .main-nav a:hover {
+            background-color: var(--primary-color);
+        }
+        
+
+        /* About Card Styles */
+        .about-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            min-width: 280px;
+            max-width: 800px;
+            width: 100%;
+            transition: var(--transition);
+            
+        }
+
+        .about-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Card Header */
+        .card-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card-header h2 {
+            margin-bottom: 5px;
+            font-size: 1.8rem;
+            
+        }
+
+        /* Content Sections */
+        .content-sections {
+            padding: 30px;
+        }
+
+        .content-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .content-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .content-section p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .content-section ul {
+            padding-left: 20px;
+            color: #555;
+        }
+
+        .content-section li {
+            margin-bottom: 8px;
+        }
+
+        /* Responsive Adjustments */
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .about-card {
+                width: 800px;
+        }
+    }
+
+        /* Tablets */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .about-card {
+                width: 85%;
+        }
+    }
+
+        /* Mobile */
+        @media (max-width: 768px) and (min-width: 481px) {
+            .about-card {
+                width: 92%;
+        }
+    }
+
+        /* Small Mobile */
+        @media (max-width: 480px) {
+            .card-header h2 {
+                font-size: 1.5rem;
+        }
+    
+            .about-card {
+                width: 95%;
+                margin: 0 10px;
+        }
+    
+            .content-sections {
+                padding: 20px;
+        }
+    
+            .content-section {
+                padding: 15px;
+        }
+
+            .main-nav {
+                bottom: 15px;
+                max-width: 95%;
+        }
+    
+            .main-nav a {
+                margin: 0 0.5rem;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+        }
+
+            body {
+                padding: 15px 15px 90px 15px;
+        }
+    } 
+
+        /* Very small screens */
+        @media (max-width: 320px) {
+            .about-card {
+                width: 98%;
+                margin: 0 5px;
+        }
+    
+            .content-sections {
+                padding: 15px;
+        }
+    
+            .content-section {
+                padding: 12px;
+        }
+
+            .main-nav {
+                bottom: 10px;
+                max-width: 98%;
+        }
+    
+            .main-nav a {
+                margin: 0 0.3rem;
+                padding: 0.4rem;
+                font-size: 0.8rem;
+        }
+
+            body {
+                padding: 10px 10px 80px 10px;
+        }
+    }
+        
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav" data-testid="test-main-navigation">
+        <a href="Task0.html" data-testid="test-nav-profile">Profile</a>
+        <a href="AboutMe1.html" data-testid="test-nav-about">About Me</a>
+        <a href="contactUs1.html" data-testid="test-nav-contact">Contact</a>
+    </nav>
+
+    <main class="about-card" data-testid="test-about-page">
+        <header class="card-header">
+            <h2>About Justina</h2>
+            <p> <i>Every line of code I write is a step toward mastery.
+                <br>I’m not just building projects — <b>I’m building myself.</b></i></p>
+        </header>
+        
+        <div class="content-sections">
+            <section class="content-section">
+                <h3>Bio</h3>
+                <p data-testid="test-about-bio">
+                    I'm Onyene Justina Enayi, a passionate software developer with over 1 year of experience 
+                    in building scalable web applications. I'm currently expanding my skills through the HNG 13 
+                    internship and excited to grow as a frontend developer. I believe in creating solutions 
+                    that make a positive impact on users' lives.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h3>Goals in This Program</h3>
+                <ul data-testid="test-about-goals">
+                    <li>Master advanced JavaScript concepts and modern frameworks like React and Vue</li>
+                    <li>Learn industry best practices for scalable and maintainable web development</li>
+                    <li>Build a strong portfolio of real-world projects that solve actual problems</li>
+                    <li>Network with experienced developers and like-minded peers in the tech community</li>
+                    <li>Secure a position as a professional frontend developer in a reputable company</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h3>Areas of low confidence</h3>
+                <ul data-testid="test-about-confidence">
+                    <li>Advanced state management in large-scale applications</li>
+                    <li>Performance optimization and website speed enhancement</li>
+                    <li>Complex CSS animations and advanced layout techniques</li>
+                    <li>Comprehensive testing strategies and implementation</li>
+                    <li>Accessibility compliance at enterprise level standards</li>
+                    <li>API design patterns and backend integration best practices</li>
+                </ul>
+            </section>
+
+            <section class="content-section">
+                <h3>Note to Future Self</h3>
+                <p data-testid="test-about-future-note">
+                    Remember why you began this journey — the passion, the curiosity, 
+                    and the zeal to build things that make a difference. <br><br> Keep nurturing your confidence 
+                    and self-esteem, especially when challenges arise. Trust in your growth, believe in your skills, 
+                    and let your enthusiasm fuel your creativity. <br><br> Every expert once stood where you are now — 
+                    stay consistent, stay brave, and celebrate every victory, no matter how small.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h3>Extra Thoughts</h3>
+                <p data-testid="test-about-extra">
+                    I’m genuinely excited about the collaborative spirit of the HNG program. 
+                    <br>The opportunity to work alongside talented developers, exchange constructive feedback, 
+                    and contribute to meaningful projects fuels my passion for continuous growth. 
+                    <br><br>I believe this program will effectively bridge the gap between theoretical learning 
+                    and practical, real-world development — strengthening my confidence, teamwork, 
+                    and problem-solving skills for the journey ahead.
+                </p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
