@@ -47,8 +47,12 @@ See [TESTING.md](./TESTING.md) file for detailed notes on how this project was t
 
 **HNG 13 Stage 1 Task** - Building on Stage 0 foundation with Contact Us page form validation and About Me page reflections.
 
-## 🚀 Live Demo
-https://your-actual-netlify-url.netlify.app
+## 🚀 Live Demo stage 1
+https://profile-card-stage0and1.netlify.app/
+
+
+## 💻 GitHub Repository stage 1
+https://github.com/justinaenayio-idu/profile-card-stage0and1
 
 
 
